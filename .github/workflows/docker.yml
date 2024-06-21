@@ -48,9 +48,9 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: homework03
+          context: homework02
           platforms: linux/amd64,linux/arm64
-          file: homework03/Dockerfile
+          file: homework02/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker-meta.outputs.tags }}
           labels: ${{ steps.docker-meta.outputs.labels }}
